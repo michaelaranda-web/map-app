@@ -1,1 +1,14 @@
 <h1>Create a New Map</h1>
+
+<%= form_for @map do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :starting_latitude %>:
+  <%= f.text_field :starting_latitude %><br />
+  
+  <%= f.label :starting_longitude %>:
+  <%= f.text_field :starting_longitude %><br />
+
+  <%= f.submit %>
+<% end %>
