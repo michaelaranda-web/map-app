@@ -40,3 +40,8 @@ Quickview Backlog
   * Map form validation
   * Map model validation
   
+  * Figure out deployment process
+    - Had to manually migrate database after deploying app to Heroku:
+    
+        heroku run --app map-app-proto-two rake db:migrate
+  
