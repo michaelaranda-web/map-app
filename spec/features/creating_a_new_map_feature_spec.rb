@@ -1,9 +1,9 @@
 require "rails_helper"
 
-RSpec.feature "Creating a new map", type: :feature do
+RSpec.feature "Creating a new map", type: :feature, js: true do
   scenario "User creates a new map" do
     visit root_path
-
+    
     click_link "Click here"
 
     expect(current_path).to eq(new_map_path)
@@ -17,10 +17,10 @@ RSpec.feature "Creating a new map", type: :feature do
     
     expect(page).to have_content("Your New Map")
     
-    # Uncomment once able to figure out how to use/configure Poltergeist
+    # # Uncomment once able to figure out how to use/configure Poltergeist
     
-    # expect(page).to have_content("Michael's Map of Mightiness")
-    # expect(page).to have_content("3.14159")
-    # expect(page).to have_content("2.71828")
+    expect(page).to have_content("Michael's Map of Mightiness")
+    expect(page).to have_content("3.14159")
+    expect(page).to have_content("2.71828")
   end
 end
