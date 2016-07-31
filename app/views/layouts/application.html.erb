@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<%= javascript_tag do %>
+  $(document).ready(function () {
+    <%= yield :view_javascript %>
+  });
+<% end %>
+
 <%= yield %>
 
 </body>

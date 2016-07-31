@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :maps, only: [:new, :create, :show]
+  resources :maps, only: [:index, :new, :create, :show]
   # get 'map/new'
   # get 'map/create'
   # get 'map/show'

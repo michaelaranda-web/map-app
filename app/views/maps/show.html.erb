@@ -1,2 +1,11 @@
-<h1>Map#show</h1>
-<p>Find me in app/views/map/show.html.erb</p>
+<h1>Your New Map</h1>
+
+<div id="map">Test</div>
+
+<% content_for :view_javascript do %>
+
+  var map = new MapApp.app.views.Map({
+    map: <%= @map_json.html_safe %>
+  });
+  
+<% end %>

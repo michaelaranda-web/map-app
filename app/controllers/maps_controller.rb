@@ -12,6 +12,11 @@ class MapsController < ApplicationController
     end
   end
   
+  def show
+    @map = Map.find_by(id: params[:id])
+    @map_json = @map.to_json
+  end
+  
   private
   
   def map_params
