@@ -1,0 +1,42 @@
+***********************
+Features:
+
+***********************
+
+maps/new
+  * User can specify starting point for their new map
+    - One of the form fields allows you to specify a starting point at a named location (e.g. city)
+    - Field auto-completes/suggests
+    - Map preview 
+      * on the side, showing where your tentative starting point is
+    
+maps/show
+
+  Map:
+  
+  * User can create new markers
+    - Photo, caption, description
+    - No modal, display sections for each component should be editable while marker is selected
+  * Photo section allows for multiple photos
+  * Photo section allows for videos
+  * Map allows you to go through markers in order
+    - e.g. clicking on back and forward arrows causes the map to jump from one marker to another
+  
+  Markers:
+  
+  * User can change marker style/icon
+  
+  
+***********************  
+Quickview Backlog
+
+***********************
+
+  * Styling for all pages
+    - Welcome
+    - maps/new
+    - maps/show
+    
+  * Map form validation
+  * Map model validation
+  
