@@ -5,7 +5,7 @@
 <% content_for :view_javascript do %>
 
   var map = new MapApp.app.views.Map({
-    map: <%= @map_json.html_safe %>
+    map: new MapApp.app.models.Map(<%= @map_json.html_safe %>)
   });
   
 <% end %>
