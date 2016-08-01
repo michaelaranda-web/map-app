@@ -17,7 +17,27 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
+
+Capybara.register_driver :poltergeist_debug do |app|
+  options = {
+    phantomjs: Phantomjs.path,
+    inspector: true
+  }
+  
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
+Capybara.register_driver :poltergeist_ignore_js_errors do |app|
+  options = {
+    phantomjs: Phantomjs.path,
+    js_errors: false
+  }
+  
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
+# Ignore javascript errors until I can get Poltergeist + MapBox to cooperate
+Capybara.javascript_driver = :poltergeist_ignore_js_errors
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
