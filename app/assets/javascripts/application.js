@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require mapbox-gl
 //= require ./app
 //= require_tree ./app/models
 //= require_tree ./app
+//= require mapboxgl

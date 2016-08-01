@@ -1,3 +1,23 @@
-// Place all the styles related to the Map controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.map-new {
+  #map-frame {
+    display: inline-block;
+    width: 400px; 
+    height: 100vh;
+  }
+  
+  .map-form-section {
+    display: inline-block;
+    width: 400px; 
+    height: 1200px;
+    
+    vertical-align: top;
+    
+    h1 {
+      margin: 10px 15px;
+    }
+    
+    .map-form {
+      margin: 10px 15px;
+    }
+  }
+}

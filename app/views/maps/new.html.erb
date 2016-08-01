@@ -1,14 +1,37 @@
-<h1>Create a New Map</h1>
+<div class="map-new" style='width: 1200px; height: 2000px;'>
+  <div id='map-frame'></div>
+  <div class="map-form-section">
+    <h1>Create a New Map</h1>
+    
+    <%= form_for @map, html: {:class => "map-form"} do |f| %>
+      <div>
+        <%= f.label :name %>:
+        <%= f.text_field :name %>
+      </div>
+      
+      <div>
+        <%= f.label :starting_latitude %>:
+        <%= f.text_field :starting_latitude %>
+      </div>
+      
+      <div>
+        <%= f.label :starting_longitude %>:
+        <%= f.text_field :starting_longitude %>
+      </div>
+      
+      <%= f.submit %>
+    <% end %>
+    
+  </div>
+</div>
 
-<%= form_for @map do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+<% content_for :view_javascript do %>
 
-  <%= f.label :starting_latitude %>:
-  <%= f.text_field :starting_latitude %><br />
+  var map = new mapboxgl.Map({
+    container: 'map-frame',
+    center: [-117.160648, 32.714786],
+    zoom: 13,
+    style: 'mapbox://styles/mapbox/streets-v9'
+  });
   
-  <%= f.label :starting_longitude %>:
-  <%= f.text_field :starting_longitude %><br />
-
-  <%= f.submit %>
 <% end %>
