@@ -17,6 +17,26 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/poltergeist'
+
+Capybara.register_driver :poltergeist_debug do |app|
+  options = {
+    phantomjs: Phantomjs.path,
+    inspector: true
+  }
+  
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
+Capybara.register_driver :poltergeist_ignore_js_errors do |app|
+  options = {
+    phantomjs: Phantomjs.path,
+    js_errors: false
+  }
+  
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
+
 Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
