@@ -4,17 +4,17 @@
     <h1>Create a New Map</h1>
     
     <%= form_for @map, html: {:class => "map-form"} do |f| %>
-      <div>
+      <div class="map-form-field">
         <%= f.label :name %>:
         <%= f.text_field :name %>
       </div>
       
-      <div>
+      <div class="map-form-field">
         <%= f.label :starting_latitude %>:
         <%= f.text_field :starting_latitude %>
       </div>
       
-      <div>
+      <div class="map-form-field">
         <%= f.label :starting_longitude %>:
         <%= f.text_field :starting_longitude %>
       </div>
