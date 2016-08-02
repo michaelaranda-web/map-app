@@ -40,6 +40,8 @@ Quickview Backlog
   * Map form validation
   * Map model validation
   
+  * Global header/footer
+  
   * Figure out deployment process
     - Had to manually migrate database after deploying app to Heroku:
     
