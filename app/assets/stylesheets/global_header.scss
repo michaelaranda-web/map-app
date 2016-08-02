@@ -1,0 +1,22 @@
+.global-header {
+  background-color: #b84743;
+  
+  #site-logo {
+    color: white;
+    font-size: 30px;
+    
+    display: inline-block;
+    padding: 8px;
+  }
+  
+  .sign-in-link {
+    display: inline-block;
+    color: white;
+  }
+}
+
+.right {
+    float: right;
+    margin-top: 15px;
+    margin-right: 25px;
+}

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= render 'shared/global_header' %>
+
 <%= javascript_tag do %>
   $(document).ready(function () {
     <%= yield :view_javascript %>
