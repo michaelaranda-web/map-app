@@ -40,7 +40,12 @@ Quickview Backlog
   * Map form validation
   * Map model validation
   
+  * User create account/log-in (Devise)
+  
   * Global header/footer
+    - Header:
+      * Clickable site logo
+      * Sign in/Sign Up links
   
   * Figure out deployment process
     - Had to manually migrate database after deploying app to Heroku:
