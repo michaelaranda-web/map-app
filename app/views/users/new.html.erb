@@ -1,0 +1,23 @@
+<h1>Create an account</h1>
+
+<%= form_for @user do |f| %>
+    <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    </div>
+    <br/>
+
+    <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    </div>
+
+    <br/>
+    <div>
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+    </div>
+
+    <br/>
+    <%= f.submit "Create account", class: "btn btn-primary" %>
+<% end %>

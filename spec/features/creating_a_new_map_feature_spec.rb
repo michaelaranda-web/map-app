@@ -5,11 +5,10 @@ RSpec.feature "Creating a new map", type: :feature, js: true do
     visit root_path
     
     expect(page).to have_content("MapApp")
-    expect(page).to have_content("Sign In")
+    expect(page).to have_content("Log In")
     
     click_link "Click here"
 
-    save_and_open_page
     expect(current_path).to eq(new_map_path)
     expect(page).to have_content("Create a New Map")
     expect(page).to have_css('#map-frame')
