@@ -18,11 +18,5 @@ RSpec.feature "Creating a new account", type: :feature, js: true do
     click_button "Sign up"
     
     expect(current_path).to eq(root_path)
-    
-    # expect(page).to have_content("Your New Map")
-    
-    # expect(page).to have_content("Michael's Map of Mightiness")
-    # expect(page).to have_content("3.14159")
-    # expect(page).to have_content("2.71828")
   end
 end
