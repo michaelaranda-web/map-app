@@ -1,6 +1,8 @@
 require "rails_helper"
 
 RSpec.feature "Creating a new account", type: :feature, js: true do
+  include CreateAccountHelper
+  
   scenario "User creates a new account" do
     visit root_path
     
@@ -11,12 +13,15 @@ RSpec.feature "Creating a new account", type: :feature, js: true do
 
     expect(current_path).to eq(new_user_registration_path)
 
-    fill_in "user_email", with: "frank@ocean.com"
-    fill_in "user_password", with: "password"
-    fill_in "user_password_confirmation", with: "password"
+    signup_with_valid_account_information
     
     click_button "Sign up"
     
     expect(current_path).to eq(root_path)
+    expect(page).to have_content("Sign Out")
+    
+    click_link "Click here"
+    
+    expect(current_path).to eq(new_map_path)
   end
 end

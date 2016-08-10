@@ -1,4 +1,6 @@
 class MapsController < ApplicationController
+  before_filter :require_login
+  
   def new
     @map = Map.new
   end
@@ -21,5 +23,9 @@ class MapsController < ApplicationController
   
   def map_params
     params.require(:map).permit(:name, :starting_latitude, :starting_longitude)
+  end
+  
+  def require_login
+    redirect_to new_user_registration_path unless user_signed_in?
   end
 end
