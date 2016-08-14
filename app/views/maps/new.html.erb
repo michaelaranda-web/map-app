@@ -27,11 +27,13 @@
 
 <% content_for :view_javascript do %>
 
-  var map = new mapboxgl.Map({
+  var mapbox = new mapboxgl.Map({
     container: 'map-frame',
     center: [-117.1630037, 32.71331587],
     zoom: 13,
     style: 'mapbox://styles/mapbox/streets-v9'
   });
+  
+  var initialMap = new InitialMap(mapbox, 'url(' + '<%= asset_path "marker-small.png" %>' + ')');
   
 <% end %>

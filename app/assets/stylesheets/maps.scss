@@ -3,6 +3,12 @@
     display: inline-block;
     width: 400px; 
     height: 100vh;
+    
+    .marker {
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 24px;
+    }
   }
   
   .map-form-section {

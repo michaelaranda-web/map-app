@@ -56,3 +56,5 @@ Quickview Backlog
     - Maybe broken, maybe not...possible that MapBox.js is actually broken itself and Poltergeist is just catching it
     - Always getting Javascript errors from external JS libraries...
     - It seemed like maybe recompiling assets worked once, but not anymore?
+    
+  * Modify/style(?) map marker so that a right click corresponds to the bottom of the marker, rather than then top-left corner
