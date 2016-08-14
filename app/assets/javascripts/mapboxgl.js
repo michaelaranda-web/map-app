@@ -3,7 +3,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWljaGFlbGFyYW5kYS13ZWIiLCJhIjoiY2lyYjhldXM2M
 function InitialMap(mapbox, markerUrl) {
   var currentStartingPoint;
   
-  mapbox.on('contextmenu', function(e) {
+  mapbox.on('click', function(e) {
      addStartingPoint(e);
   });
   

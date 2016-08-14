@@ -57,4 +57,6 @@ Quickview Backlog
     - Always getting Javascript errors from external JS libraries...
     - It seemed like maybe recompiling assets worked once, but not anymore?
     
-  * Modify/style(?) map marker so that a right click corresponds to the bottom of the marker, rather than then top-left corner
+  * Debug why contextmenu event was not working
+    - Worked on Ubuntu, but not on Windows?
+    - Modify/style(?) map marker so that a right click corresponds to the bottom of the marker, rather than then top-left corner

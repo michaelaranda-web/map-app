@@ -231,8 +231,8 @@
 
 .mapboxgl-marker {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -18px;
+    left: -12px;
     will-change: transform;
 }
 
