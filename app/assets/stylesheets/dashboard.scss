@@ -1,0 +1,23 @@
+.dashboard-page {
+  height: 100vh;
+  
+  .dashboard-section {
+    height: 600px;
+    min-width: 850px;
+    
+    background-color: #fff8f0;
+    
+    #map-frame {
+      display: block;
+      margin: 0 auto;
+      width: 800px; 
+      height: 100%;
+      
+      .marker {
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 24px;
+      }
+    }
+  }
+}

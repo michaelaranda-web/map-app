@@ -47,6 +47,8 @@ Quickview Backlog
       * Clickable site logo
       * Sign in/Sign Up links
   
+  * Zoom-in/out buttons on map
+  
   * Figure out deployment process
     - Had to manually migrate database after deploying app to Heroku:
     

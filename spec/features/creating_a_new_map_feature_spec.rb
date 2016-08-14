@@ -26,15 +26,12 @@ RSpec.feature "Creating a new map", type: :feature, js: true do
     expect(page).to have_css('#map-frame')
     
     fill_in "map_name", with: "Michael's Map of Mightiness"
-    fill_in "map_starting_latitude", with: "3.14159"
-    fill_in "map_starting_longitude", with: "2.71828"
+    fill_in "map_starting_latitude", with: "32.73176911327792"
+    fill_in "map_starting_longitude", with: "-117.14620849347227"
     
     click_button "Create Map"
     
-    expect(page).to have_content("Your New Map")
-    
+    expect(page).to have_css('#map-frame')
     expect(page).to have_content("Michael's Map of Mightiness")
-    expect(page).to have_content("3.14159")
-    expect(page).to have_content("2.71828")
   end
 end
