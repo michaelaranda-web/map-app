@@ -2,15 +2,14 @@
   height: 100vh;
   
   .dashboard-section {
-    height: 600px;
+    height: 1000px;
     min-width: 850px;
     
     background-color: #fff8f0;
     
     #map-frame {
-      display: block;
-      margin: 0 auto;
-      width: 800px; 
+      display: inline-block;
+      width: 400px; 
       height: 100%;
       
       .marker {
